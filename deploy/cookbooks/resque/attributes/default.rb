@@ -1,1 +1,1 @@
-worker_memory("300") # Mb
+worker_memory(300) # Mb
