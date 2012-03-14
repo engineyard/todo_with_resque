@@ -32,10 +32,29 @@ GEM
     arel (2.0.10)
     bouncy-castle-java (1.5.0146.1)
     builder (2.1.2)
+    bunny (0.7.9)
+    chef (0.10.8)
+      bunny (>= 0.6.0)
+      erubis
+      highline
+      json (>= 1.4.4, <= 1.6.1)
+      mixlib-authentication (>= 1.1.0)
+      mixlib-cli (>= 1.1.0)
+      mixlib-config (>= 1.1.2)
+      mixlib-log (>= 1.3.0)
+      moneta
+      net-ssh (~> 2.1.3)
+      net-ssh-multi (~> 1.1.0)
+      ohai (>= 0.6.0)
+      rest-client (>= 1.0.4, < 1.7.0)
+      treetop (~> 1.4.9)
+      uuidtools
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    eycloud-recipe-resque (1.0)
     faker (1.0.1)
       i18n (~> 0.4)
+    highline (1.6.11)
     i18n (0.5.0)
     jdbc-mysql (5.1.13)
     jdbc-postgres (9.0.801)
@@ -46,6 +65,7 @@ GEM
     jruby-openssl (0.7.4)
       bouncy-castle-java
     jruby-rack (1.0.10)
+    json (1.6.1)
     kgio (2.6.0)
     mail (2.2.19)
       activesupport (>= 2.3.6)
@@ -53,8 +73,26 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mixlib-authentication (1.1.4)
+      mixlib-log
+    mixlib-cli (1.2.2)
+    mixlib-config (1.1.2)
+    mixlib-log (1.3.0)
+    moneta (0.6.0)
     multi_json (1.1.0)
     mysql2 (0.2.13)
+    net-ssh (2.1.4)
+    net-ssh-gateway (1.1.0)
+      net-ssh (>= 1.99.1)
+    net-ssh-multi (1.1)
+      net-ssh (>= 2.1.4)
+      net-ssh-gateway (>= 0.99.0)
+    ohai (0.6.10)
+      mixlib-cli
+      mixlib-config
+      mixlib-log
+      systemu (~> 2.2.0)
+      yajl-ruby
     pg (0.11.0)
     polyglot (0.3.2)
     rack (1.2.4)
@@ -89,6 +127,8 @@ GEM
       vegas (~> 0.1.2)
     resque-rails (1.0.1)
       resque
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     simple_form (1.5.1)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -96,6 +136,7 @@ GEM
       rack (~> 1.1)
       tilt (>= 1.2.2, < 2.0)
     sqlite3 (1.3.4)
+    systemu (2.2.0)
     thor (0.14.6)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -110,8 +151,10 @@ GEM
       kgio (~> 2.4)
       rack
       raindrops (~> 0.6)
+    uuidtools (2.1.2)
     vegas (0.1.11)
       rack (>= 1.0.0)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   java
@@ -119,6 +162,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-jdbc-adapter
+  chef
+  eycloud-recipe-resque
   faker
   jdbc-mysql
   jdbc-postgres
