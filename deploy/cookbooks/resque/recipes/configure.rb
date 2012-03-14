@@ -52,7 +52,7 @@ if %w[solo app app_master util].include? node[:instance_role]
       mode 0655
       source "resque.yml.erb"
       variables(:framework_env => node[:environment][:framework_env],
-                :redis_host => redis_instance.public_hostname,
+                :redis_host => redis_instance[:public_hostname],
                 :redis_port => 6379)
     end
   end
