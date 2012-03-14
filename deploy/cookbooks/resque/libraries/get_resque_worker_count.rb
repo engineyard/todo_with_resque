@@ -10,7 +10,7 @@ class Chef
       # Want no more than ((total memory - 300) / est process size) workers + jobs to run
       # in other words, if all workers on the instance are running jobs, there should
       #   be memory left over
-      result = (mem_total_mb - worker_memory) / worker_memory
+      result = (mem_total_mb - node[:worker_memory]) / node[:worker_memory]
       result /= 2 if node[:instance_role] == 'solo' || node[:instance_role] == 'eylocal'
       result
     end
