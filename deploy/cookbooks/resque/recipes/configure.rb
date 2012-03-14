@@ -4,7 +4,7 @@
 #
 
 if node[:instance_role] == "solo" || node[:instance_role] == "eylocal" || 
-                (node[:instance_role] == "util" && node[:name] !~ /^(resque)/)
+                (node[:instance_role] == "util" && node[:name] =~ /^(resque)/)
   resque_workers_count = get_resque_worker_count()
 
   remote_file "/usr/local/bin/resque_kill_stale" do
