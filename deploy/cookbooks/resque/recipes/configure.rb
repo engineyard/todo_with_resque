@@ -41,9 +41,9 @@ if node[:instance_role] == "solo" || node[:instance_role] == "eylocal" ||
 end
 
 if %w[solo app app_master util].include? node[:instance_role]
-  redis_instance = node[:engineyard][:environment][:instances].find {|x| x.name == "redis"} ||
+  redis_instance = node[:engineyard][:environment][:instances].find {|x| x[:name] == "redis"} ||
                        node[:engineyard][:environment][:db_master] ||
-                       node[:engineyard][:environment][:instances].find { |x| x.role == "solo" }
+                       node[:engineyard][:environment][:instances].find { |x| x[:role] == "solo" }
 
   node[:applications].each do |app, data|
     template "/data/#{app}/shared/config/resque.yml" do
