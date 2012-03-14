@@ -4,7 +4,7 @@ class Chef
       # $ sudo cat /proc/meminfo
       # MemTotal:        1759228 kB
       # ...
-      mem_total_kb = `awk '/MemTotal/{print $2}' /proc/meminfo`.strip
+      mem_total_kb = `awk '/MemTotal/{print $2}' /proc/meminfo`.strip.to_i
       mem_total_mb = mem_total_kb / 1024
 
       # Want no more than ((total memory - 300) / est process size) workers + jobs to run
