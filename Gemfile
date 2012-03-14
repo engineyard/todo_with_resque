@@ -23,6 +23,7 @@ platforms :jruby do
 end
 
 gem "faker"
+gem "rake"
 gem "resque-rails"
 
 
