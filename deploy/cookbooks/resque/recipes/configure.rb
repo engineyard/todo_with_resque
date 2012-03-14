@@ -20,11 +20,11 @@ if node[:instance_role] == "solo" || node[:instance_role] == "eylocal" ||
     mode 0755
   end
   
-  crond "Kill stale resque workers" do
-    filename "resque_kill_stale"
-    interval "* * * * *"
-    command %Q{/usr/local/bin/resque_kill_stale /tmp/resque_ttls}
-  end
+  # crond "Kill stale resque workers" do
+  #   filename "resque_kill_stale"
+  #   interval "* * * * *"
+  #   command %Q{/usr/local/bin/resque_kill_stale /tmp/resque_ttls}
+  # end
 
   directory "/var/log/resque" do
     owner node[:owner_name]
