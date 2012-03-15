@@ -180,3 +180,4 @@ DEPENDENCIES
   thor
   trinidad
   unicorn
+  yajl-ruby

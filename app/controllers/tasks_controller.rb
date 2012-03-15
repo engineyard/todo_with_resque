@@ -31,10 +31,8 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        if @task.done?
-          # queue AddNewTask
-          Resque.enqueue(AddNewTask, @task.list_id)
-        end
+        Resque.enqueue(AddNewTask, @task.list_id) if @task.done?
+
         format.html { redirect_to( list_tasks_url(@list), :notice => 'Task was successfully updated.') }
       else
         format.html { render :action => "edit" }

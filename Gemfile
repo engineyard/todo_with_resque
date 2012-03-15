@@ -34,8 +34,6 @@ group :development, :test do
 
 end
 
-
-group :eycloud do
-  gem "chef"
-  gem "eycloud-recipe-resque"
-end
+gem "chef", :group => :eycloud
+gem "yajl-ruby", :group => :eycloud
+gem "eycloud-recipe-resque", :group => :eycloud
