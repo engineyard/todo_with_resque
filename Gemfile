@@ -34,7 +34,7 @@ group :development, :test do
 
 end
 
-gem "chef", :group => :eycloud
+gem "chef", '~> 0.10.8', :group => :eycloud
 gem "yajl-ruby", :group => :eycloud
 gem "eycloud-helper-cronjobs", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-helper-cronjobs.git"
 gem "eycloud-recipe-resque", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-recipe-resque.git", :branch => "gemspec"
