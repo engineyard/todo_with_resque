@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/engineyard/eycloud-recipe-resque.git
+  revision: 22f36f6b02d1a22290fe2f3c1c2ca21ce7b606c6
+  branch: gemspec
+  specs:
+    eycloud-recipe-resque (1.0.2)
+      eycloud-helper-cronjobs
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -52,8 +60,6 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eycloud-helper-cronjobs (1.0.1)
-    eycloud-recipe-resque (1.0.2)
-      eycloud-helper-cronjobs
     faker (1.0.1)
       i18n (~> 0.4)
     highline (1.6.11)
@@ -166,7 +172,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbc-adapter
   chef
-  eycloud-recipe-resque
+  eycloud-recipe-resque!
   faker
   jdbc-mysql
   jdbc-postgres

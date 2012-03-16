@@ -36,4 +36,4 @@ end
 
 gem "chef", :group => :eycloud
 gem "yajl-ruby", :group => :eycloud
-gem "eycloud-recipe-resque", :group => :eycloud
+gem "eycloud-recipe-resque", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-recipe-resque.git", :branch => "gemspec"
