@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/engineyard/eycloud-recipe-resque.git
-  revision: 10e15822d4634bf513553d97f7aacaa7310c6dc2
+  revision: e3661be875ad86a359fde5bd4d512dcbb0780d6c
   branch: gemspec
   specs:
     eycloud-recipe-resque (1.0.2)
