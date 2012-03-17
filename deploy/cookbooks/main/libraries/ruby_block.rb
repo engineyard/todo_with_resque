@@ -2,13 +2,24 @@
 class Chef
   class Resource
     class RubyBlock < Chef::Resource
-      def initialize(name, collection=nil, node=nil)
-        super(name, collection, node)
+      if Chef::VERSION == '0.6.0.2'
+        def initialize(name, collection=nil, node = nil)
+          super(name, collection, node)
+          init
+        end
+      else
+        def initialize(name, run_context=nil)
+          super(name, run_context)
+          init
+        end
+      end
+
+      def init
         @resource_name = :ruby_block
         @action = :create
         @allowed_actions.push(:create)
       end
- 
+
       def block(&block)
         if block
           @block = block
@@ -25,7 +36,6 @@ class Chef
   class Provider
     class RubyBlock < Chef::Provider
       def load_current_resource
-        Chef::Log.debug(@new_resource.inspect)
         true
       end
  
