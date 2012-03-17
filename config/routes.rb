@@ -4,6 +4,9 @@ Listr::Application.routes.draw do
     resources :tasks, :except => [:new, :edit, :show]
   end
 
+  require "resque/server"
+  mount Resque::Server.new, :at => "/resque/34257893542"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
