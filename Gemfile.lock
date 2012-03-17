@@ -52,6 +52,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eycloud-helper-cronjobs (1.0.2)
+    eycloud-recipe-redis (0.1.0)
     eycloud-recipe-resque (1.0.3)
       eycloud-helper-cronjobs
     faker (1.0.1)
@@ -167,6 +168,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbc-adapter
   chef (~> 0.10.8)
+  eycloud-recipe-redis
   eycloud-recipe-resque
   faker
   jdbc-mysql
