@@ -11,4 +11,4 @@ end
 # Runs application cookbooks
 run "cd #{latest_release}; sudo bundle exec chef-solo -c #{latest_release}/deploy/solo.rb -j /etc/chef-custom/dna.json"
 
-run "cat #{latest_release}/deploy/chef-stacktrace.out"
+run "cat #{latest_release}/deploy/chef-stacktrace.out 2> /dev/null || echo 'Chef run successful'"
