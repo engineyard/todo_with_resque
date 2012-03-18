@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/engineyard/eycloud-recipe-resque.git
-  revision: 7a7feb1bcdd5889045be7ddd9c523ba534037b1e
+  revision: 7d0c16543ed0d481ba7b492916b93d8ba0fb389c
   specs:
     eycloud-recipe-resque (1.0.3)
       eycloud-helper-cronjobs
