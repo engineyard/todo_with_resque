@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/engineyard/eycloud-helper-common.git
-  revision: 4b2f5da7da037f7f7db3f215f5c99b24a0598941
+  revision: e3349f62ce881c2f73f1e2f29cfb9511fc6e75a7
   specs:
     eycloud-helper-common (0.2.0.pre)
 
