@@ -4,6 +4,12 @@ GIT
   specs:
     eycloud-helper-common (0.2.0.pre)
 
+GIT
+  remote: git://github.com/engineyard/eycloud-recipe-foreman.git
+  revision: 0fd51566afef57e878e588afa16eb7939f585ae4
+  specs:
+    eycloud-recipe-foreman (0.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -177,6 +183,7 @@ DEPENDENCIES
   activerecord-jdbc-adapter
   chef (~> 0.10.8)
   eycloud-helper-common!
+  eycloud-recipe-foreman!
   eycloud-recipe-redis
   eycloud-recipe-resque
   faker
