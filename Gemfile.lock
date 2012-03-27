@@ -77,7 +77,8 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     eycloud-helper-cronjobs (1.0.2)
-    eycloud-helper-emerge (1.0.0)
+    eycloud-helper-emerge (1.1.0)
+      eycloud-helper-common
     eycloud-recipe-redis (0.1.5)
       eycloud-helper-emerge
     faker (1.0.1)
