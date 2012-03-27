@@ -14,8 +14,13 @@ $LOAD_PATH.each do |path|
   if File.exist?(metadata_path = File.join(recipe_path, 'metadata.json'))
     metadata = Yajl::Parser.new.parse(File.new(metadata_path, "r"))
     if metadata["name"]
-      puts "Unpacking #{metadata["name"]} recipe into cookbooks from #{cookbooks_path}"
-      FileUtils.cp_r(recipe_path, File.join(cookbooks_path, metadata["name"]))
+      target_path = File.join(cookbooks_path, metadata["name"])
+      unless File.exist?(target_path)
+        puts "Unpacking #{metadata["name"]} recipe into cookbooks from #{cookbooks_path}"
+        FileUtils.cp_r(recipe_path, target_path)
+      else
+        puts "Skipping #{metadata["name"]} recipe import as folder exists already"
+      end
     else
       puts "ERROR: Recipe has no 'name' in metadata.json (#{cookbooks_path})"
     end
