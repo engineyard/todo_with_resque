@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/engineyard/eycloud-recipe-foreman.git
-  revision: e26849378080d4969fb66a188982bd0bd0c2139a
+  revision: 1c677aaa21c889a8cc1c03b68177c9b5a9aa418f
   submodules: true
   specs:
     eycloud-recipe-foreman (0.0.1)
