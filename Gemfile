@@ -39,8 +39,8 @@ gem "yajl-ruby", :group => :eycloud
 # gem "eycloud-helper-common", :group => :eycloud
 gem "eycloud-recipe-redis", :group => :eycloud
 gem "eycloud-recipe-foreman", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-recipe-foreman.git", :submodules => true
-gem "eycloud-recipe-resque", :group => :eycloud
+# gem "eycloud-recipe-resque", :group => :eycloud
 gem "eycloud-helper-common", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-helper-common.git"
 # gem "eycloud-recipe-redis", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-recipe-redis.git"
 # gem "eycloud-helper-cronjobs", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-helper-cronjobs.git"
-# gem "eycloud-recipe-resque", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-recipe-resque.git"
+gem "eycloud-recipe-resque", :group => :eycloud, :git => "git://github.com/engineyard/eycloud-recipe-resque.git", :branch => "foreman"

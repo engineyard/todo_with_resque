@@ -14,6 +14,15 @@ GIT
     eycloud-recipe-foreman (0.0.1)
       eycloud-helper-common
 
+GIT
+  remote: git://github.com/engineyard/eycloud-recipe-resque.git
+  revision: 50df516034c9b120d67bb993370d4afe0f6097bc
+  branch: foreman
+  specs:
+    eycloud-recipe-resque (1.1.1)
+      eycloud-helper-cronjobs
+      eycloud-recipe-foreman
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -71,8 +80,6 @@ GEM
     eycloud-helper-emerge (1.0.0)
     eycloud-recipe-redis (0.1.5)
       eycloud-helper-emerge
-    eycloud-recipe-resque (1.1.0)
-      eycloud-helper-cronjobs
     faker (1.0.1)
       i18n (~> 0.4)
     highline (1.6.11)
@@ -191,7 +198,7 @@ DEPENDENCIES
   eycloud-helper-common!
   eycloud-recipe-foreman!
   eycloud-recipe-redis
-  eycloud-recipe-resque
+  eycloud-recipe-resque!
   faker
   jdbc-mysql
   jdbc-postgres
