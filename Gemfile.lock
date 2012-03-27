@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/engineyard/eycloud-recipe-resque.git
-  revision: 50df516034c9b120d67bb993370d4afe0f6097bc
+  revision: 45c6471093f188cccbdebe7edeac1db55753c238
   branch: foreman
   specs:
     eycloud-recipe-resque (1.1.1)
